@@ -21,4 +21,20 @@ A RESTful API for managing products with full CRUD operations, built with Node.j
     git clone https://github.com/williamsgqdev/Assesment.git
 ```
 
+2. Install dependencies
+```bash
+   npm i
+```
+## RUN Development Environment 🏃
+
+```bash
+   npm run start:dev
+```
+
+## RUN Production Environment ✈️
+1. ```bash
+   npm run build && npm run start
+```
+
+
 
