@@ -32,9 +32,6 @@ A RESTful API for managing products with full CRUD operations, built with Node.j
 ```
 
 ## RUN Production Environment ✈️
-1. ```bash
+```bash
    npm run build && npm run start
 ```
-
-
-
