@@ -7,7 +7,6 @@ A RESTful API for managing products with full CRUD operations, built with Node.j
 - Type-safe implementation with TypeScript
 - Automated testing with Jest
 - Hot-reload development with Nodemon
-- Production-ready build system
 
 ## Prerequisites 📋
 - Node.js v18+
