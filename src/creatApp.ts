@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { errorHandler, limiter, notFoundMiddleware, swaggerDocs } from "./common";
 import helmet from "helmet";
 import productRouter from './products/products.router';
@@ -10,6 +10,11 @@ export function createApp() {
   app.use(express.json());
   swaggerDocs(app)
   app.use(limiter)
+  app.get('/', (req: Request, res: Response)=> {
+    res.status(200).json({
+      message: '🚀 Live'
+    })
+  })
 
   app.use('/api/v1/products', productRouter)
 
