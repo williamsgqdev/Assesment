@@ -30,7 +30,6 @@ A RESTful API for managing products with full CRUD operations, built with Node.j
    npm run start:dev
 ```
 
-## RUN Production Environment ✈️
-```bash
-   npm run build && npm run start
-```
+## Basic Auth Credentials ⚙️
+- username: **admin**
+- password: **pass**
