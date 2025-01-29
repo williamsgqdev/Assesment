@@ -4,7 +4,6 @@ import { basicAuth, validationPipe } from "../common";
 import { CreateProductSchema, GetProductSchema, GetProductsSchema, UpdateProductSchema } from "./dto";
 
 const router = Router();
-
 /**
  * @openapi
  * paths:
@@ -251,6 +250,16 @@ const router = Router();
  *                         type: string
  *                         format: date-time
  *                         example: "2025-01-29T12:00:00Z"
+ *         404:
+ *           description: Product not found
+ *           content:
+ *             application/json:
+ *               schema:
+ *                 type: object
+ *                 properties:
+ *                   message:
+ *                     type: string
+ *                     example: "Product not found"
  * 
  *     patch:
  *       tags:
@@ -331,6 +340,53 @@ const router = Router();
  *                         type: string
  *                         format: date-time
  *                         example: "2025-01-29T15:00:00Z"
+ *         404:
+ *           description: Product not found
+ *           content:
+ *             application/json:
+ *               schema:
+ *                 type: object
+ *                 properties:
+ *                   message:
+ *                     type: string
+ *                     example: "Product not found"
+ * 
+ *     delete:
+ *       tags:
+ *         - Product
+ *       summary: Delete a product by ID
+ *       parameters:
+ *         - in: path
+ *           name: id
+ *           required: true
+ *           schema:
+ *             type: string
+ *             format: uuid
+ *           description: The ID of the product to delete.
+ *       responses:
+ *         200:
+ *           description: Product deleted successfully
+ *           content:
+ *             application/json:
+ *               schema:
+ *                 type: object
+ *                 properties:
+ *                   status:
+ *                     type: number
+ *                     example: 200
+ *                   message:
+ *                     type: string
+ *                     example: "Product deleted successfully"
+ *         404:
+ *           description: Product not found
+ *           content:
+ *             application/json:
+ *               schema:
+ *                 type: object
+ *                 properties:
+ *                   message:
+ *                     type: string
+ *                     example: "Product not found"
  */
 
 
